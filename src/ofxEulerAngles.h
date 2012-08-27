@@ -5,7 +5,7 @@
 namespace ofxEulerAngles
 {
 
-	ofVec3f toEulerYRP(const ofQuaternion &q)
+	inline ofVec3f toEulerYRP(const ofQuaternion &q)
 	{
 		ofVec3f e;
 		ofMatrix4x4 m = q;
@@ -32,7 +32,7 @@ namespace ofxEulerAngles
 
 	inline ofVec3f toEulerZXY(const ofQuaternion &q) { return toEulerYRP(q); }
 
-	ofQuaternion fronEulerYRP(const ofVec3f &v)
+	inline ofQuaternion fronEulerYRP(const ofVec3f &v)
 	{
 		float ci = cos(v.z);
 		float cj = cos(v.y);
