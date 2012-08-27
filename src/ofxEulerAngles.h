@@ -32,7 +32,7 @@ namespace ofxEulerAngles
 
 	inline ofVec3f toEulerZXY(const ofQuaternion &q) { return toEulerYRP(q); }
 
-	inline ofQuaternion fronEulerYRP(const ofVec3f &v)
+	inline ofQuaternion fromEulerYRP(const ofVec3f &v)
 	{
 		float ci = cos(v.z);
 		float cj = cos(v.y);
@@ -53,6 +53,6 @@ namespace ofxEulerAngles
 		return m.getRotate();
 	}
 
-	inline ofQuaternion fronEulerZXY(const ofVec3f &v) { return fronEulerYRP(v); }
+	inline ofQuaternion fromEulerZXY(const ofVec3f &v) { return fromEulerYRP(v); }
 
 };
